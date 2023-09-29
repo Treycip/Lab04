@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,9 @@ namespace App1
             };
             Item6.Clicked += async (sender, e) =>
             {
-                var answer = await DisplayAlert
+                var answer = await DisplayAlert("Question?",
+                    "Would you like to play a game", "Yes", "No");
+                Debug.WriteLine(answer);
             };
 
 

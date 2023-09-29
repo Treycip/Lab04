@@ -10,15 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page2 : ContentPage
+    public partial class ModalPage1 : ContentPage
     {
-        public Page2()
+        public ModalPage1()
         {
             InitializeComponent();
-        }
-        async void OnPreviousPageButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
         }
     }
 }

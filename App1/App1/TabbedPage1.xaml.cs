@@ -10,15 +10,15 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page2 : ContentPage
+    public partial class TabbedPage1 : TabbedPage
     {
-        public Page2()
+        public TabbedPage1()
         {
             InitializeComponent();
-        }
-        async void OnPreviousPageButtonClicked(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
+            btnClose.Clicked += async (sender, e) =>
+            {
+                await Navigation.PopAsync();
+            };
         }
     }
 }
