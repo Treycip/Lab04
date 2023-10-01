@@ -15,6 +15,10 @@ namespace App1
         public CarouselPage1()
         {
             InitializeComponent();
+            btnClose.Clicked += async (sender, e) =>
+            {
+                await Navigation.PopAsync();
+            };
         }
     }
 }
